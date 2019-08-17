@@ -1,0 +1,24 @@
+
+
+<ol>
+  {{#each tasks}}
+  	<li>
+  {{this.task}}<button>x</button>
+  	</li>
+  {{/each}}
+</ol>
+
+<div>
+  <form action="/" method="POST">
+  	<textarea type="text" name="task"></textarea>
+
+  	<button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+
+			$("button").click(function(){
+				console.log(this.parent().text())
+			});
+		</script>
